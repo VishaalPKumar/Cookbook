@@ -72,7 +72,7 @@ struct CBRecipeEditorView: View {
                                     .frame(width: 20, height: 20)
                                 Text(ingredient.name.wrappedValue)
                                 Spacer()
-                                Text(ingredient.measurement.wrappedValue.string())
+                                Text("\(ingredient.amount.wrappedValue) \(ingredient.measurement.wrappedValue.rawValue)")
                             }
                         }
                         .onDelete{ indexSet in
@@ -248,5 +248,5 @@ struct CBRecipeEditorView: View {
 }
 
 #Preview {
-    CBRecipeEditorView()
+    CBRecipeEditorView(recipe: Recipe())
 }

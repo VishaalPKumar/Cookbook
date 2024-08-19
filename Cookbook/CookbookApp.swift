@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct CookbookApp: App {
+        
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CBTabView()
         }
+        .modelContainer(for: Recipe.self)
     }
 }

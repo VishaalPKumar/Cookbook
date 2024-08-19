@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct CBTabView: View {
+        
     var body: some View {
         TabView {
-            CBMenuScreenView()
-                .tabItem { Label("Menu", systemImage: "menucard") }
-            
-            CBRecipeScreenView()
+
+            CBRecipeScreenListView()
                 .tabItem { Label("Recipes", systemImage: "list.clipboard") }
-            
-            CBSettingScreenView()
-                .tabItem { Label("Settings", systemImage: "gearshape")}
+
         }
     }
 }

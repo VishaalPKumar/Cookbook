@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum CBError: Error {
+    case invalidIngredient
+    case invalidRecipe
+}

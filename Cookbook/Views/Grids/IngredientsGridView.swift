@@ -28,15 +28,15 @@ struct IngredientCell: View {
     
     var body: some View {
         VStack {
-            Image("ing-placeholder")
+            Image(ingredient.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50, height: 50)
-                .padding(.bottom)
+                .padding(.bottom, 5)
             Text(ingredient.name)
                 .multilineTextAlignment(.center)
                 .font(.footnote)
-            Text(ingredient.measurement.string())
+            Text("\(ingredient.amount) \(ingredient.measurement.rawValue)")
                 .font(.footnote)
                 .italic()
         }
@@ -46,5 +46,5 @@ struct IngredientCell: View {
 }
 
 #Preview {
-    IngredientsGridView(ingredients: MockData.sampleIngredients)
+    IngredientsGridView(ingredients: IngredientMockData.sampleIngredients)
 }
